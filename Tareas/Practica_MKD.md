@@ -46,7 +46,9 @@ Caracterización de la plataforma móvil TurtleBot3:
 ## Conclusiones
  
 ## Referencias
-<a id="1">[1]</a> "Choose an architecture | Download". Ubuntu MATE. https://ubuntu-mate.org/download/ (accedido el 13 de mayo de 2022).
+<a id="1">[1]</a> ¿De qué manera Markdown simplifica la creación de textos en la web? (s/f). Hostgator.mx. Recuperado el 14 de septiembre de 2022, de https://www.hostgator.mx/blog/markdown/
+
+
 <a id="2">[2]</a> "Noetic/Installation/Ubuntu - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/noetic/Installation/Ubuntu (accedido el 13 de mayo de 2022).
 
 <a id="3">[3]</a> "ROS/Tutorials/CreatingPackage - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/ROS/Tutorials/CreatingPackage (accedido el 13 de mayo de 2022).
