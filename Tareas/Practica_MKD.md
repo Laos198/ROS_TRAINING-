@@ -1,5 +1,5 @@
 # Practica de documentación en Markdown
-
+Desarrollo 
 
 ## 
 
@@ -16,7 +16,19 @@
 - [5 . Referencias](#referencias)
 
 ## Introducción
+MarkDown fue desarrollado en 2004 por John Gruber y Aaron Swartz, Markdown es un sistema de formato abierto que simplifica el proceso de estructuración del texto. Con una codificación mínima, es fácil de usar, visualmente más limpio y también puede ser convertido a HTML de manera muy sencilla.
 
+Este lenguaje puede ser procesado en muchos programas, desde Microsoft Word hasta Openoffice.org Writer; y sus archivos se vuelven pequeños y difícilmente se rompen.
+
+Con él, eres capaz de crear:
+
+* Marcaciones 
+* Títulos 
+* Textos 
+* Links 
+* Códigos
+
+Todo de una manera limpia, legible y precisa, y más rápido que si se hiciera usando HTML.
 
 ## Desarrollo
 Clasificación de los robots móviles por configuración
@@ -51,5 +63,4 @@ Caracterización de la plataforma móvil TurtleBot3:
 | Iniciales  | Description |
 | ----------:| ----------- |
 | **DMC**  | Diego Méndez Carter [GitHub profile](https://github.com/Laos198) |
-| **MGR-MX** | Mechatronics Research Group, México [GitHub profile](https://github.com/mrg-mx) |
 
