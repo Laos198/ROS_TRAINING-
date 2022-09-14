@@ -28,7 +28,7 @@ Con él, eres capaz de crear:
 * Links 
 * Códigos
 
-Todo de una manera limpia, legible y precisa, y más rápido que si se hiciera usando HTML. MarkDown wa inmensamente más legible y está al alcance de la gente que no es desarrollador.
+Todo de una manera limpia, legible y precisa, y más rápido que si se hiciera usando HTML. MarkDown wa inmensamente más legible y está al alcance de la gente que no es desarrollador. [[1]](#1)
 
 En esta tarea se hará práctica cpn su implementación desarrollando temas de interés para la materia de temas selectos de ingeniería mecatrónica del semestre 2023-1
 
