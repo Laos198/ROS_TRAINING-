@@ -33,12 +33,19 @@ Todo de una manera limpia, legible y precisa, y más rápido que si se hiciera u
 En esta tarea se hará práctica cpn su implementación desarrollando temas de interés para la materia de temas selectos de ingeniería mecatrónica del semestre 2023-1
 
 ## Desarrollo
-Clasificación de los robots móviles por configuración
-Restricciones cinemáticas
-Conceptos de localización, ruta, odometría y planeación de ruta.
-Diferencias entre sistemas holonómicos y no-honolomicos.
+# Clasificación de los robots móviles por configuración
 
-Caracterización de la plataforma móvil TurtleBot3:
+
+
+# Restricciones cinemáticas
+
+
+# Conceptos de localización, ruta, odometría y planeación de ruta.
+
+
+# Diferencias entre sistemas holonómicos y no-honolomicos.
+
+# Caracterización de la plataforma móvil TurtleBot3:
 - Modelo cinemático
 - Sensores y actuadores que lo integran.
 - Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
