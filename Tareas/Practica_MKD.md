@@ -41,7 +41,7 @@ Los robots con ruedas pueden ser clasificados en dos categorías:
 Y esto depende mucho por el tipo de ruedas que utiliza, ya que los robots no honolómicos utilizan ruedas convencionales como las que tienen los autos normales: Las ruedas rotan con respecto a un eje perpendicular al plano de la rueda que contiene el centro de esta. 
 ![image](https://user-images.githubusercontent.com/20031100/190763168-bd0aa726-2c02-46e3-8f39-21f324e52563.png)
 
-Los sistemas omnidireccionales utilizan tipicamente ruedas tipo mecanum (o ruedas suecas). Estas ruedas generalmente es una llant aumentada con rodillos en su circunferencia que giran libremente permitiendo un deslizamiento hacia los lados del sistema.
+Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas suecas). Estas ruedas generalmente es una llant aumentada con rodillos en su circunferencia que giran libremente permitiendo un deslizamiento hacia los lados del sistema.
 ![image](https://user-images.githubusercontent.com/20031100/190756597-b9519143-d56e-4b72-917e-6a5ff87f8a58.png)
 
 ### Restricciones cinemáticas
