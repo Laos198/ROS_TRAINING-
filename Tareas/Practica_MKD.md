@@ -67,6 +67,13 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 
 ## Conclusiones
  
+ 
+
+## Autor
+| Iniciales  | Description |
+| ----------:| ----------- |
+| **DMC**  | Diego Méndez Carter [GitHub profile](https://github.com/Laos198) |
+
 ## Referencias
 <a id="1">[1]</a> ¿De qué manera Markdown simplifica la creación de textos en la web? (s/f). Hostgator.mx. Recuperado el 14 de septiembre de 2022, de https://www.hostgator.mx/blog/markdown/
 
@@ -87,8 +94,4 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 
 <a id="8">[8]</a> "Arm_lib". PyPI. https://pypi.org/project/Arm_lib/ (accedido el 13 de mayo de 2022).
  
-## Autor
-| Iniciales  | Description |
-| ----------:| ----------- |
-| **DMC**  | Diego Méndez Carter [GitHub profile](https://github.com/Laos198) |
 
