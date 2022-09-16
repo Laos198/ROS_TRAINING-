@@ -44,19 +44,25 @@ Y esto depende mucho por el tipo de ruedas que utiliza, ya que los robots no hon
 Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas suecas). Estas ruedas generalmente es una llant aumentada con rodillos en su circunferencia que giran libremente permitiendo un deslizamiento hacia los lados del sistema.
 ![image](https://user-images.githubusercontent.com/20031100/190756597-b9519143-d56e-4b72-917e-6a5ff87f8a58.png) [[2]](#2)
 
-### Restricciones cinemáticas
+### Restricciones cinemáticas y diferencias entre los tipos de sistmemas
 - Para los sistemas no holonómicos sabemos que la cantidad de grados de libertad controlables es menor a la cantidad de grados totales; como los carros normales, tracciones diferenciales o configuracioens de tricíclos, esto nos dice que no todas las trayectorias son posibles.
 
 - Para los sistemas omnidireccionales (holonómicos) sabemos que la cantidad de grados de libertad controlables es igual a la cantidad de grados de libertad totales; Lo que nos dice que todas las trayectorias en el plano son posibles. [[3]](#3)
 
 ### Conceptos de localización, ruta, odometría y planeación de ruta.
-
-
-### Diferencias entre sistemas holonómicos y no-honolomicos.
+- Localización: Consiste en determinar la posición del robot en relación a un mapa dado a un entorno. [[4]](#4)
+- Ruta: secuencia de posiciones en las que un robot se encuentra libre de colisión con los obstáculos del espacio de trabajo. [[5]](#5)
+- Odometría: Estudio de la estimación de la posición de vehículos con ruedas durante la navegación 
+- Planeación de rutas: Sea un espacio de trabajo de un robot cuya planeación de ruta es aquella por la cual este desea encontrar un camino libre de colisión dada una configuración incial y una final si existe; en caso contrario que sea capaz de determinarla. [[5]](#5)
 
 ### Caracterización de la plataforma móvil TurtleBot3:
 - Modelo cinemático
-- Sensores y actuadores que lo integran.
+- Sensores y actuadores que lo integran
+  Según la página de Robotis, el único sensor que usa el TurtleBot3 en su versión Burger es un     LIDAR "LDS-01" o "LDS-02" 
+  
+  En cuanto a actuadores, tenemos que usa dos Motores 	DYNAMIXEL (XL430-W250-T)
+   ![image](https://user-images.githubusercontent.com/20031100/190827583-2d136908-5c30-4047-854f-fb7e6483c27b.png)
+
 - Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
 
 ## Conclusiones
@@ -70,11 +76,12 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 
 <a id="3">[3]</a> (S/f). Femexrobotica.org. Recuperado el 16 de septiembre de 2022, de https://www.femexrobotica.org/eir2016-2017/wp-content/uploads/robots_omnidireccionales.pdf
 
-<a id="4">[4]</a> "ROS/Tutorials/BuildingPackages - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/ROS/Tutorials/BuildingPackages (accedido el 13 de mayo de 2022).
+<a id="4">[4]</a> Localización y planificación de trayectorias. (s/f). Tekniker.es. Recuperado el 16 de septiembre de 2022, de https://www.tekniker.es/es/localizacion-y-planificacion-de-trayectorias
 
-<a id="5">[5]</a> "Vision_opencv - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/vision_opencv (accedido el 13 de mayo de 2022).
+<a id="5">[5]</a>(S/f-b). Udlap.mx. Recuperado el 16 de septiembre de 2022, de http://catarina.udlap.mx/u_dl_a/tales/documentos/lis/munoz_r_o/capitulo4.pdf
 
-<a id="6">[6]</a> "Install raspi-config on Ubuntu MATE 20.10 and higher". Ubuntu MATE Community. https://ubuntu-mate.community/t/install-raspi-config-on-ubuntu-mate-20-10-and-higher/23974 (accedido el 13 de mayo de 2022).
+<a id="6">[6]</a> ROBOTIS e-manual. (s/f). ROBOTIS E-Manual. Recuperado el 16 de septiembre de 2022, de https://emanual.robotis.com/docs/en/platform/turtlebot3/features/
+
 
 <a id="7">[7]</a> "How to install python3-smbus ubuntu package on ubuntu 20.04/ubuntu 18.04/ubuntu 19.04/ubuntu 16.04". Modern Server and App Hosting Control Panel. https://zoomadmin.com/HowToInstall/UbuntuPackage/python3-smbus (accedido el 13 de mayo de 2022).
 
