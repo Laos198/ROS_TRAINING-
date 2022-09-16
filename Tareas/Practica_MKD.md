@@ -39,13 +39,15 @@ Los robots con ruedas pueden ser clasificados en dos categorías:
 - No Holonómicos 
 
 Y esto depende mucho por el tipo de ruedas que utiliza, ya que los robots no honolómicos utilizan ruedas convencionales como las que tienen los autos normales: Las ruedas rotan con respecto a un eje perpendicular al plano de la rueda que contiene el centro de esta. 
-![image](https://user-images.githubusercontent.com/20031100/190763168-bd0aa726-2c02-46e3-8f39-21f324e52563.png)
+![image](https://user-images.githubusercontent.com/20031100/190763168-bd0aa726-2c02-46e3-8f39-21f324e52563.png) [[2]](#2)
 
 Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas suecas). Estas ruedas generalmente es una llant aumentada con rodillos en su circunferencia que giran libremente permitiendo un deslizamiento hacia los lados del sistema.
-![image](https://user-images.githubusercontent.com/20031100/190756597-b9519143-d56e-4b72-917e-6a5ff87f8a58.png)
+![image](https://user-images.githubusercontent.com/20031100/190756597-b9519143-d56e-4b72-917e-6a5ff87f8a58.png) [[2]](#2)
 
 ### Restricciones cinemáticas
+- Para los sistemas no holonómicos sabemos que la cantidad de grados de libertad controlables es menor a la cantidad de grados totales; como los carros normales, tracciones diferenciales o configuracioens de tricíclos, esto nos dice que no todas las trayectorias son posibles.
 
+- Para los sistemas omnidireccionales (holonómicos) sabemos que la cantidad de grados de libertad controlables es igual a la cantidad de grados de libertad totales; Lo que nos dice que todas las trayectorias en el plano son posibles. [[3]](#3)
 
 ### Conceptos de localización, ruta, odometría y planeación de ruta.
 
@@ -63,9 +65,10 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 <a id="1">[1]</a> ¿De qué manera Markdown simplifica la creación de textos en la web? (s/f). Hostgator.mx. Recuperado el 14 de septiembre de 2022, de https://www.hostgator.mx/blog/markdown/
 
 
-<a id="2">[2]</a> "Noetic/Installation/Ubuntu - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/noetic/Installation/Ubuntu (accedido el 13 de mayo de 2022).
+<a id="2">[2]</a> Lynch, K. M., & Park, F. C. (2017). MECHANICS, PLANNING, AND CONTROL. Northwestern.edu. http://hades.mech.northwestern.edu/images/7/7f/MR.pdf
 
-<a id="3">[3]</a> "ROS/Tutorials/CreatingPackage - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/ROS/Tutorials/CreatingPackage (accedido el 13 de mayo de 2022).
+
+<a id="3">[3]</a> (S/f). Femexrobotica.org. Recuperado el 16 de septiembre de 2022, de https://www.femexrobotica.org/eir2016-2017/wp-content/uploads/robots_omnidireccionales.pdf
 
 <a id="4">[4]</a> "ROS/Tutorials/BuildingPackages - ROS wiki". Documentation - ROS Wiki. http://wiki.ros.org/ROS/Tutorials/BuildingPackages (accedido el 13 de mayo de 2022).
 
