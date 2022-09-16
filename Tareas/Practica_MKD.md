@@ -37,15 +37,15 @@ En esta tarea se hará práctica cpn su implementación desarrollando temas de i
 
 
 
-# Restricciones cinemáticas
+### Restricciones cinemáticas
 
 
-# Conceptos de localización, ruta, odometría y planeación de ruta.
+### Conceptos de localización, ruta, odometría y planeación de ruta.
 
 
-# Diferencias entre sistemas holonómicos y no-honolomicos.
+### Diferencias entre sistemas holonómicos y no-honolomicos.
 
-# Caracterización de la plataforma móvil TurtleBot3:
+### Caracterización de la plataforma móvil TurtleBot3:
 - Modelo cinemático
 - Sensores y actuadores que lo integran.
 - Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
