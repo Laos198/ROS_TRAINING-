@@ -33,9 +33,16 @@ Todo de una manera limpia, legible y precisa, y más rápido que si se hiciera u
 En esta tarea se hará práctica cpn su implementación desarrollando temas de interés para la materia de temas selectos de ingeniería mecatrónica del semestre 2023-1
 
 ## Desarrollo
-# Clasificación de los robots móviles por configuración
+### Clasificación de los robots móviles por configuración 
+Los robots con ruedas pueden ser clasificados en dos categorías: 
+- Omnidireccionales 
+- No Holonómicos 
 
+Y esto depende mucho por el tipo de ruedas que utiliza, ya que los robots no honolómicos utilizan ruedas convencionales como las que tienen los autos normales: Las ruedas rotan con respecto a un eje perpendicular al plano de la rueda que contiene el centro de esta. 
+![image](https://user-images.githubusercontent.com/20031100/190763168-bd0aa726-2c02-46e3-8f39-21f324e52563.png)
 
+Los sistemas omnidireccionales utilizan tipicamente ruedas tipo mecanum (o ruedas suecas). Estas ruedas generalmente es una llant aumentada con rodillos en su circunferencia que giran libremente permitiendo un deslizamiento hacia los lados del sistema.
+![image](https://user-images.githubusercontent.com/20031100/190756597-b9519143-d56e-4b72-917e-6a5ff87f8a58.png)
 
 ### Restricciones cinemáticas
 
