@@ -60,7 +60,7 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 - Sensores y actuadores que lo integran
   Según la página de Robotis, el único sensor que usa el TurtleBot3 en su versión Burger es un     LIDAR "LDS-01" o "LDS-02" 
   
-  En cuanto a actuadores, tenemos que usa dos Motores 	DYNAMIXEL (XL430-W250-T)
+  En cuanto a actuadores, tenemos que usa dos Motores 	DYNAMIXEL (XL430-W250-T) [[6]](#6)
    ![image](https://user-images.githubusercontent.com/20031100/190827583-2d136908-5c30-4047-854f-fb7e6483c27b.png)
 
 - Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
