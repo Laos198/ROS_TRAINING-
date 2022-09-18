@@ -71,9 +71,9 @@ $$
 \mathbb{q^°} \ =\ \begin{bmatrix}
 	Φ & x^° & y^°
 \end{bmatrix} \ =\ \begin{bmatrix}
-n_{x} & o_{x} & a_{x}\\
-n_{y} & o_{y} & a_{y}\\
-n_{z} & o_{z} & a_{z}
+-r/d2 & r/2d \\
+r/2 cosΦ & r/2 cosΦ \\
+r/2 isnΦ & r/2 sinΦ
 \end{bmatrix}
 $$
 
