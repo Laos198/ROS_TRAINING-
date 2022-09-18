@@ -57,6 +57,15 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 
 ### Caracterización de la plataforma móvil TurtleBot3:
 - Modelo cinemático
+
+Como es un robot diferencial, tiene el modelo cinemátcio siguiente 
+![image](https://user-images.githubusercontent.com/20031100/190882535-94d602be-c1f8-484d-a60d-3976a3b4d6c2.png)
+
+![image](https://user-images.githubusercontent.com/20031100/190882543-b3ce3e11-d0f2-4b36-9805-c756ae547b8f.png)
+
+![image](https://user-images.githubusercontent.com/20031100/190883055-de66617c-74fd-4875-8d10-2fd724d90433.png)
+
+
 - Sensores y actuadores que lo integran
 
   Según la página de Robotis, el único sensor que usa el TurtleBot3 en su versión Burger es un     LIDAR "LDS-01" o "LDS-02" 
