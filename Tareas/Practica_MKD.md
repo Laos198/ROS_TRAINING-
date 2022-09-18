@@ -74,8 +74,10 @@ $$
 -r/d2 & r/2d \\
 r/2 cosΦ & r/2 cosΦ \\
 r/2 isnΦ & r/2 sinΦ
-\end{bmatrix}
-\*\ 
+\end{bmatrix} \ * \ \begin{bmatrix}
+ωL\\
+ωR
+\end{bmatrix}\ 
 
 $$
 
