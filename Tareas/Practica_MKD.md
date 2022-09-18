@@ -84,7 +84,11 @@ donde:
 - Φ: es el angulo de giro con respecto al origen 
 - r: es el radio de las ruedas del robot 
 - d: es la distancia del eje hacia el centro del eje del robot 
-- ωL y ωR : son las velocidades angulares de las ruedas del robot  
+- ωL y ωR : son las velocidades angulares de las ruedas del robot 
+
+
+
+
 
 
 - Sensores y actuadores que lo integran
