@@ -78,7 +78,7 @@ r/2 isnΦ & r/2 sinΦ
 \*\ \begin{bmatrix}
 ωL\\
 ωR\\
-\end{bmatrix}
+\end{bmatrix}\
 
 $$
 
