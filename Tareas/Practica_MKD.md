@@ -75,6 +75,11 @@ $$
 r/2 cosΦ & r/2 cosΦ \\
 r/2 isnΦ & r/2 sinΦ
 \end{bmatrix}
+\*\ \begin{bmatrix}
+ωL\\
+ωR\\
+\end{bmatrix}
+
 $$
 
 
