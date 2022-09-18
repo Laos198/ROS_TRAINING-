@@ -68,7 +68,7 @@ Como es un robot diferencial, tiene el modelo cinemátcio siguiente
 
 
 $$
-\mathbb{R} \ =\ \begin{bmatrix}
+\mathbb{q^°} \ =\ \begin{bmatrix}
 n & o & a
 \end{bmatrix} \ =\ \begin{bmatrix}
 n_{x} & o_{x} & a_{x}\\
