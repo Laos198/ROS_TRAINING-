@@ -58,7 +58,7 @@ Los sistemas omnidireccionales utilizan tipicamente ruedas mecanum (o ruedas sue
 ### Caracterización de la plataforma móvil TurtleBot3:
 - Modelo cinemático
 
-Como es un robot diferencial, tiene el modelo cinemátcio siguiente
+Como es un robot diferencial, tiene el modelo cinemátcio siguiente:
 
 ![image](https://user-images.githubusercontent.com/20031100/190882535-94d602be-c1f8-484d-a60d-3976a3b4d6c2.png)
 
@@ -80,7 +80,11 @@ r/2 isnΦ & r/2 sinΦ
 \end{bmatrix}\
 $$
 
-
+donde: 
+- Φ: es el angulo de giro con respecto al origen 
+- r: es el radio de las ruedas del robot 
+- d: es la distancia del eje hacia el centro del eje del robot 
+- ωL y ωR : son las velocidades angulares de las ruedas del robot  
 
 
 - Sensores y actuadores que lo integran
