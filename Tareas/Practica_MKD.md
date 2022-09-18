@@ -93,15 +93,25 @@ donde:
 
 - Sensores y actuadores que lo integran
 
-  Según la página de Robotis, el único sensor que usa el TurtleBot3 en su versión Burger es un     LIDAR "LDS-01" o "LDS-02" 
+  Según la página de Robotis, el único sensor que usa el TurtleBot3 en su versión Burger es un     LIDAR "LDS-01" o "LDS-02" [[6]](#6)
+
   
   En cuanto a actuadores, tenemos que usa dos Motores 	DYNAMIXEL (XL430-W250-T) [[6]](#6)
    ![image](https://user-images.githubusercontent.com/20031100/190827583-2d136908-5c30-4047-854f-fb7e6483c27b.png)
 
 - Nodos y Tópicos de ROS utilizados por la plataforma Turtlebot3 y sus sensores
 
+Algunos de los nodos que ocupa el Turtlebot son: 
+- SLAM 
+- Teleoperation
+
+Algunos de los tópicos que opcupa 
+- cmd_vel 
+- odom
+- LaserScan
+
 ## Conclusiones
- 
+ Markdown es una forma fácil de hacer reportes en repositorios y es sumanente versatil para documentar de forma colaborativa con tu equipo de trabajo, además de lo rápido que es pra hacer cambios en el sistema sin necesidad de abrir varios programas, sino en el mismo sistema de código implementado.
  
 
 ## Autor
@@ -125,8 +135,5 @@ donde:
 <a id="6">[6]</a> ROBOTIS e-manual. (s/f). ROBOTIS E-Manual. Recuperado el 16 de septiembre de 2022, de https://emanual.robotis.com/docs/en/platform/turtlebot3/features/
 
 
-<a id="7">[7]</a> "How to install python3-smbus ubuntu package on ubuntu 20.04/ubuntu 18.04/ubuntu 19.04/ubuntu 16.04". Modern Server and App Hosting Control Panel. https://zoomadmin.com/HowToInstall/UbuntuPackage/python3-smbus (accedido el 13 de mayo de 2022).
-
-<a id="8">[8]</a> "Arm_lib". PyPI. https://pypi.org/project/Arm_lib/ (accedido el 13 de mayo de 2022).
  
 
