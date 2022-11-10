@@ -51,7 +51,9 @@ Y los errores que podría ocasionar o bien, los errores acumulados del algoritmo
 
 ### Codigo propuesto
 Este código propone una posición objetivo y recaba una posición inicial del estado del robot en la simulación de gazebo. Hasta que la pose en su orientación del robot sea la misma en la triangulación de las diferencias de puntos, avanzará, mientras no sea así, este seguirá girando.
-dejo el link del script a continuación 
+dejo el link del script a continuación: 
+
+https://github.com/Laos198/ROS_TRAINING-/blob/e4222c427bf0f3deb316b240ca2e77d0a4c1a76c/Tareas/Tarea2/motion_planin2.py
 
 Yo creo que si la posición final requiriera una orientación específica, no cambiaría en esencia el código, simplemente tendría que repetir la misma acción del principio que sería recabar la información y empatar las las orientaciones. 
 
