@@ -55,6 +55,36 @@ dejo el link del script a continuación:
 
 https://github.com/Laos198/ROS_TRAINING-/blob/e4222c427bf0f3deb316b240ca2e77d0a4c1a76c/Tareas/Tarea2/motion_planin2.py
 
+<pre><code>
+ vel = Twist()   
+ # se obtiene la posicion de inicio del móvil
+ xm = msg.pose.pose.position.x
+ ym = msg.pose.pose.position.y
+ rot_q = msg.pose.pose.orientation
+ ( _, _, thetam) = euler_from_quaternion([rot_q.x, rot_q.y, rot_q.z, rot_q.w])
+ 
+ #coordenadas objetivo
+ obj = Point ()
+ obj.x = 5
+ obj.y = 5
+ 
+ 
+#Mientras  la posisicón actual del móvil no sean las mismas que las coordenadas objetivo entonces 
+while (obj.x != xm) and (obj.x != ym): 
+    vec_x = obj.x - xm
+    vec_y = obj.y - ym
+    angulo = atan2(vec_y,vec_x)
+
+    if abs(angulo - thetam) > 0.1: 
+	vel.linear.x = 0.0
+	vel.angular.z = 0.5
+
+    else: 
+	vel.linear.x = 0.5
+	vel.angular.z = 0.0
+
+</code></pre>
+
 Yo creo que si la posición final requiriera una orientación específica, no cambiaría en esencia el código, simplemente tendría que repetir la misma acción del principio que sería recabar la información y empatar las las orientaciones. 
 
 ## Conclusiones
