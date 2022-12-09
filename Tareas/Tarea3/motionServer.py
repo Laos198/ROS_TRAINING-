@@ -6,13 +6,14 @@ from nav_msgs.msg import Odometry
 from tf import transformations
 import math
 
-
+from tsr1.srv import GetGo2point, GetGo2pointResponse, GetGo2pointRequest
 
 class GoToPoint:
     def __init__(self):
-        rospy.init_node("tb3_go2point")
+        rospy.init_node("motionServer")
         rospy.loginfo("Starting GoToPointNode as tb3_go2point.")
         self._pose_act = Pose2D()
+        self._vel_actu = Twist()
         self._distance_to_go = 0.0
         self._goal = Pose2D()
         self._phi = 0.0
@@ -25,6 +26,50 @@ class GoToPoint:
         self._goal_reached = False
         self._odom_sub = rospy.Subscriber('/odom', Odometry, self._on_odometry_update)
         self._cmdvel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+        self._cmdvel_sub = rospy.Subscriber('/cmd_vel',Twist, self._on_cmdvel_update)
+        self._get2point_srv = rospy.Service('/get2point', GetGo2point, self._on_go2_handler)
+        
+    
+    def _on_cmdvel_update(self, msg): 
+        vel = msg.linear.x
+        self._vel_actu.linear.x = msg.linear.x
+        self._vel_actu.angular.y = msg.angular.z
+
+    
+    def _on_go2_handler(self, req):
+        res = GetGo2pointResponse()
+        if self._vel_actu.linear.x !=0 and self._vel_actu.angular.z !=0: 
+            res.success = False
+            res.status_message = "No se ha completado la tarea"
+        else: 
+            self.set_goal(req.target.x, req.target.y, req.target.theta)
+            start_time = rospy.Time.now()
+            if self.getRobotState() == 'STOP':
+                self.start()
+            while (not rospy.is_shutdown()):
+                rospy.loginfo(f"Estado actual {self.getRobotState()}")
+                if self.getRobotState() == 'TWIST':
+                    self._head_towards_goal()
+                elif self.getRobotState() == 'GO':
+                    self._go_staight()
+                elif self.is_goal_reched():      # Cond. anterior: tb3_go2point.getRobotState() == 'GOAL'
+                    end_time = rospy.Time.now()
+                    elapse_time = end_time - start_time  
+                    self.stop()
+                    rospy.loginfo(f"On GOAL, posicion act x: {self._pose_act.x:.6f}, y: {self._pose_act.y:.6f}, theta: {self._pose_act.theta:.6f} rads.")
+                    rospy.loginfo(f"Elpsed time: {elapse_time.to_sec():.4f} seg.")
+                    res.goal_result.x = self._pose_act.x
+                    res.goal_result.y = self._pose_act.y
+                    res.goal_result.theta = self._pose_act.theta
+                    res.duracion = elapse_time
+                    res.error_dist, res.error_orient = self._compute_goal()
+                    res.status_message = "Proceso finalizado"
+                    res.success = True
+                    rospy.loginfo(f"Proceso concluido.")
+                    break
+        ##return (res)
+        return GetGo2pointResponse(res.goal_result, res.error_dist,res.error_orient,res.duracion,res.success, res.status_message)
+        
 
     def _on_odometry_update(self, msg):
         pose_act = msg.pose.pose
@@ -38,7 +83,7 @@ class GoToPoint:
         self._pose_act.x = pose_act.position.x # en metros
         self._pose_act.y = pose_act.position.y # en metros
         self._pose_act.theta = ang_euler[2]  # Solo tomo el angulo de rot en 'Z' (yaw) en radianes
-
+    
     def _compute_goal(self):
         dx = (self._goal.x - self._pose_act.x)
         dy = (self._goal.y - self._pose_act.y)
@@ -82,7 +127,6 @@ class GoToPoint:
         cmd_twist =  Twist()
         cmd_twist.linear.x = vel_lin
         cmd_twist.angular.z = vel_ang
-
         self._cmdvel_pub.publish(cmd_twist)
 
     def start(self):
@@ -98,25 +142,8 @@ class GoToPoint:
     def is_goal_reched(self):
         return self._goal_reached
 
-if __name__ == "__main__":
-    tb3_go2point = GoToPoint()
-    tb3_go2point.set_goal(3, 2, 0)
-    rate = rospy.Rate(1)
-    start_time = rospy.Time.now()
-    if tb3_go2point.getRobotState() == 'STOP':
-        tb3_go2point.start()
-    while (not rospy.is_shutdown()):
-        rospy.loginfo(f"Estado actual {tb3_go2point.getRobotState()}")
-        if tb3_go2point.getRobotState() == 'TWIST':
-            tb3_go2point._head_towards_goal()
-        elif tb3_go2point.getRobotState() == 'GO':
-            tb3_go2point._go_staight()
-        elif tb3_go2point.is_goal_reched():      # Cond. anterior: tb3_go2point.getRobotState() == 'GOAL'
-            end_time = rospy.Time.now()
-            elapse_time = end_time - start_time  
-            tb3_go2point.stop()
-            rospy.loginfo(f"On GOAL, posicion act x: {tb3_go2point._pose_act.x:.6f}, y: {tb3_go2point._pose_act.y:.6f}, theta: {tb3_go2point._pose_act.theta:.6f} rads.")
-            rospy.loginfo(f"Elpsed time: {elapse_time.to_sec():.4f} seg.")
-            break
 
-    rospy.loginfo(f"Proceso concluido.")
+if __name__ == "__main__":
+    rospy.loginfo("Servicio algoritmo go2point ")
+    tb3_go2point = GoToPoint()
+    rospy.spin()
